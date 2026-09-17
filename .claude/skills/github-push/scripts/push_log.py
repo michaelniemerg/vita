@@ -62,7 +62,7 @@ def record(repo, commit_hash=None):
     message = run(["git", "log", "-1", "--pretty=%s", commit_hash], repo)
     author = run(["git", "log", "-1", "--pretty=%an <%ae>", commit_hash], repo)
     files_changed_raw = run(
-        ["git", "diff-tree", "--no-commit-id", "--name-only", "-r", commit_hash], repo
+        ["git", "diff-tree", "--no-commit-id", "--name-only", "-r", "--root", commit_hash], repo
     )
     files_list = [f for f in files_changed_raw.splitlines() if f]
     url = remote_commit_url(repo, commit_hash)
