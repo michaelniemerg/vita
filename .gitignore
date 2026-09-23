@@ -23,3 +23,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Unzipped local copy of data/prudential-life-insurance-assessment.zip (the zip is tracked)
+data/prudential-life-insurance-assessment/
